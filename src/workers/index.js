@@ -20,8 +20,8 @@ const getWorker = (file, content, options) => {
       content
     )}, ${fallbackWorkerPath})`;
   }
-
-  return `new Worker(${publicWorkerPath})`;
+  
+  return `const Worker = require('tiny-worker'); new Worker(${publicWorkerPath})`;
 };
 
 export default getWorker;

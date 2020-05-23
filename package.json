@@ -1,12 +1,12 @@
 {
-  "name": "worker-loader",
+  "name": "tiny-worker-loader",
   "version": "2.0.0",
-  "description": "worker loader module for webpack",
+  "description": "worker loader module for webpack in node using tiny worker",
   "license": "MIT",
-  "repository": "webpack-contrib/worker-loader",
+  "repository": "simonellistonball/tiny-worker-loader",
   "author": "Tobias Koppers @sokra",
-  "homepage": "https://github.com/webpack-contrib/worker-loader",
-  "bugs": "https://github.com/webpack-contrib/worker-loader/issues",
+  "homepage": "https://github.com/simonellistonball/worker-loader",
+  "bugs": "https://github.com/simonellistonball/worker-loader/issues",
   "bin": "",
   "main": "dist/cjs.js",
   "engines": {
