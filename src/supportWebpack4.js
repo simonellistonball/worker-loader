@@ -30,10 +30,7 @@ export default function(worker, request, options, cb) {
         delete this._compilation.assets[worker.file];
       }
 
-      return cb(
-        null,
-        `module.exports = function() {\n  return ${worker.factory};\n};`
-      );
+      return cb(null, `module.exports = function() { ${worker.factory}; };`);
     }
 
     return cb(null, null);
