@@ -15,7 +15,6 @@ import NodeTargetPlugin from 'webpack/lib/node/NodeTargetPlugin';
 import SingleEntryPlugin from 'webpack/lib/SingleEntryPlugin';
 import WebWorkerTemplatePlugin from 'webpack/lib/webworker/WebWorkerTemplatePlugin';
 import WorkerLoaderError from './Error';
-import supportWebpack5 from './supportWebpack5';
 import supportWebpack4 from './supportWebpack4';
 
 export default function loader() {}
@@ -70,12 +69,5 @@ export function pitch(request) {
     worker.compiler
   );
 
-  if (
-    worker.compiler.cache &&
-    typeof worker.compiler.cache.get === 'function'
-  ) {
-    supportWebpack5.call(this, worker, options, cb);
-  } else {
-    supportWebpack4.call(this, worker, request, options, cb);
-  }
+  supportWebpack4.call(this, worker, request, options, cb);
 }
